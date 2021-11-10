@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-image: url("dino/background.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+header{
+    margin-top: 2.5% ;
+}
+
+.selection{
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    border: 1px solid rgb(245, 185, 66);
+    background-color: rgba(143, 91, 65, 0.3);
+    border-radius: 10px;
+    margin: auto;
+    padding: 1%;
+}
+
+h1{
+    text-align: center;
+    color: rgb(245, 185, 66);
+}
+
+main{
+    margin-top: 2.5%;
+    visibility: hidden;
+}
+
+.displayPerso{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2vh;
+}
+
+.perso{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.attributPerso{
+    border: 1px solid rgb(245, 185, 66);
+    border-radius: 10px;
+    background-color: rgba(143, 91, 65, 0.5);
+    color: rgb(245, 185, 66);
+    font-weight: 750;
+}
+
+.form-label{
+    padding-top: 1%;
+    font-size: em;
+    font-weight: 600;
+    color:palegreen;
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+}
+
+.dinoSpecifications{
+    display: flex;
+    justify-content: space-around;
+}
+
+#name, #dinoRace, #dinoAttack, #name2, #dinoRace2, #dinoAttack2{
+    color:orangered;
+    font-weight: 650;
+}
+
+#imageDino1, #imageDino2{
+    margin-top: 4%;
+}
+
+/* *** HEALTH BAR *** */
+
+.healthAlign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dinoLife{
+    margin-left: 10px;
+}
+
+/* 
+
+.healthBar{
+    position: relative;
+    width: 150px;
+    height: 20px;
+    border: 1px solid black;
+    margin-left: 10px;
+}
+
+.healthBarFill{
+    height: 100%;
+    background: greenyellow;
+    transition: width 0.5s;
+}
+
+.healthBarValue{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/*** BOUTON ***/
+
+.actions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5%;
+}
+
+#btn{
+    border: 1px solid palegreen;
+    background: rgba(143, 91, 65, 0.3);
+    color: palegreen;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 150px;
+    height: 45px;
+    padding: 5px;
+    margin-top: 2%;
+}
+
+.button{
+    position: relative;
+    background: rgba(143, 91, 65, 0.3);
+    width: 150px;
+    height: 45px;
+    font-size: 1em;
+    border: 2px solid palegreen;
+    border-radius: 15px;
+    color: palegreen;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.button::before{
+    content:"";
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: palegreen;
+    border-radius: 50% 50% 0 0;
+    transition: all .5s;
+    z-index: -1;
+}
+
+.button:hover::before{
+    top: 0;
+    border-radius: 0;
+}
+
+.button:hover{
+    color: rgb(143, 91, 65);
+    transition: .5s;
+}
+
+.logContainer{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.log{
+    height: 10vh;
+    background: rgba(143, 91, 65, 0.5);
+    border: 1px solid rgb(245, 185, 66);
+    border-radius: 10px;
+    overflow: scroll;
+    color: rgb(245, 185, 66);
+    
+}
