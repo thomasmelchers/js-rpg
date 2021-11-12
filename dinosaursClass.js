@@ -149,6 +149,7 @@ function CreationDino (name, race, attack) {
             }
     }
 
+    
     /* 
     log.innerHTML = messageAttack;
     log.innerHTML = messageDodge;

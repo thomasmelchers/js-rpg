@@ -90,6 +90,15 @@ main{
     align-items: center;
 }
 
+progress{
+    display: inline-box;
+    background : green;
+    border: 1px solid grey;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 13px;
+}
+
 .dinoLife{
     margin-left: 10px;
 }
