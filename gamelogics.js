@@ -7,7 +7,11 @@ btn.addEventListener("click", ()=>{
     const dinoName = document.getElementById("dinoName");
     const dinoAttack = document.getElementById("attack").value;
     const dinoRace = document.getElementById("race").value;
-    const imagePerso1 = document.getElementById("imagePerso1");
+
+    const imagePerso1 = document.createElement("img");
+    imagePerso1.setAttribute("alt", "dino image rpg game");
+    const imageContainerDino1 = document.querySelector("#imageContainerDino1");
+    imageContainerDino1.appendChild(imagePerso1);
     
     document.getElementById("name").innerHTML = dinoName.value; 
     document.getElementById("dinoAttack").innerHTML = dinoAttack;
@@ -35,9 +39,10 @@ btn.addEventListener("click", ()=>{
         break;
     }
 
-    dinoLife[0].value = dino1.currentHealth;
-    dinoLife[0].max = dino1.maxHealth;
-    dinoLife[0].innerHTML = dino1.currentHealth;
+    
+    dinoLife[0].setAttribute("max", dino1.maxHealth);
+    dinoLife[0].setAttribute("value", dino1.currentHealth);
+   
 
         /* PERSO 2 */
 
@@ -45,7 +50,10 @@ btn.addEventListener("click", ()=>{
         const dino2Race = dinoRaceP2[randomNbRace];
         const dino2Attack = dinoAttackP2[randomNbAttack];
     
-        var imagePerso2 = document.getElementById("imagePerso2");
+        const imagePerso2 = document.createElement("img");
+        imagePerso2.setAttribute("alt", "dino image rpg game");
+        const imageContainerDino2 = document.querySelector("#imageContainerDino2");
+        imageContainerDino2.appendChild(imagePerso2);
 
         document.getElementById("name2").innerHTML = dino2Name; 
         document.getElementById("dinoRace2").innerHTML = dino2Race;
@@ -71,19 +79,17 @@ btn.addEventListener("click", ()=>{
             break;
         }
 
-    dinoLife[1].value = dino2.currentHealth;
-    dinoLife[1].max = dino2.maxHealth;
-    dinoLife[1].innerHTML = dino2.currentHealth;
-    
+        dinoLife[1].setAttribute("max", dino1.maxHealth);
+        dinoLife[1].setAttribute("value", dino1.currentHealth);
 
     var containerHeader = document.getElementsByClassName("containerHeader")[0];
     containerHeader.style.display="none";
-    document.getElementsByClassName("containerMain")[0].style.visibility = "visible";   
-    
-    console.log(dino2.name);
+    document.getElementsByClassName("containerMain")[0].style.visibility = "visible"; 
+
+    /* console.log(dino2.name);
     console.log(dino2.currentHealth);
     console.log(dino1.race);
-    console.log(dino1.dinoAttack);
+    console.log(dino1.dinoAttack); */
 
     /* *** BUTON ATTACK *** */
 
@@ -91,14 +97,14 @@ btn.addEventListener("click", ()=>{
     
     buttonAttackDino1.addEventListener("click", ()=>{
         dino1.dodgeByDino(dino2.dodge, dino1.dinoAttack, dino2, dinoLife[1])
-        console.log(dino2.currentHealth);
+        /* console.log(dino2.currentHealth); */
     })
 
     var buttonAttackDino2 = document.querySelector("#hit2")
 
     buttonAttackDino2.addEventListener("click", ()=>{
         dino2.dodgeByDino(dino1.dodge, dino2.dinoAttack, dino1, dinoLife[0])
-        console.log(dino1.currentHealth);
+        /* console.log(dino1.currentHealth); */
     })
     
     /* *** BUTON HEAL *** */

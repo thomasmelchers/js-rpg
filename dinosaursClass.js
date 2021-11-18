@@ -148,19 +148,13 @@ function CreationDino (name, race, attack) {
                 log.innerHTML = log.innerHTML + "<br>" + messageDodge;
             }
     }
-
-    
-    /* 
-    log.innerHTML = messageAttack;
-    log.innerHTML = messageDodge;
-    log.innerHTML = messageHeal; */
 }
 
-var clumby = new CreationDino ("Clumby", "Trex", "Tail Attack");
+/* var clumby = new CreationDino ("Clumby", "Trex", "Tail Attack"); */
 
 /* console.log(clumby.currentHealth);
 console.log(clumby.dodge);
 console.log(clumby.dinoAttack); */
 
-clumby.dodgeByDino(30);
+/* clumby.dodgeByDino(30); */
 /* console.log(clumby.dodgeByDino(30)) */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A RPG game about ">
+    <meta name="description" content="Funky Dino Figth. It's a new RPG that I imagine. Be kind with the dino you never know what will happen if you're not kind to then !!! ">
 
     <!-- liens CSS -->
     <link rel="stylesheet" href="style.css">
@@ -12,7 +12,7 @@
     <!-- liens bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
 
-    <title>RPG Game</title>
+    <title>Funky Dino Figth</title>
 </head>
 <body>
 
@@ -21,19 +21,19 @@
             <div class="col-md-6 col-lg-5 selection">
 
                 <h1>Chose your Dino</h1>
-                <label for="dName" class="form-label">What is the Name of your Dino</label>
-                <input id="dinoName" name="dName" class="input" type="text" placeholder="I'am a Veggie Dino">
+                <label for="dinoName" class="form-label">What is the Name of your Dino</label>
+                <input id="dinoName" name="dinoName" class="input" type="text" placeholder="I'am a Veggie Dino">
                 
-                <label for="dRace" class="form-label">What is the Race of your Dino</label>
-                <select id="race" name="dRace" class="form-select">
+                <label for="race" class="form-label">What is the Race of your Dino</label>
+                <select id="race" name="race" class="form-select">
                     <option value="Diplodocus">Diplodocus</option>
                     <option value="Pterodactile">Pterodactile</option>
                     <option value="Triceratops">Triceratops</option>
                     <option value="T-rex">T-rex</option>
                   </select>
 
-                  <label for="dAttack" class="form-label">Which Attack will Use your Dino</label>
-                  <select id="attack" name="dAttack" class="form-select">
+                  <label for="attack" class="form-label">Which Attack will Use your Dino</label>
+                  <select id="attack" name="attack" class="form-select">
                     <option value="Tail Attack">Tail Attack</option>
                     <option value="Claws Attack">Claws Attack</option>
                     <option value="Charge">Charge</option>
@@ -47,7 +47,7 @@
 
     <main class="containerMain">
         <div class="row displayPerso">
-            <div class="perso col-5 col-lg-6">
+            <div class="perso col-6">
                 <div class="attributPerso">  
                     <div class="name">
                         <span>Name : <span id="name"></span></span> 
@@ -57,13 +57,8 @@
                         <span>Attack : <span id="dinoAttack"></span></span> 
                     </div>
                     <div class="healthAlign">
-                        <!-- <span>Life Remaining :  </span>
-                        <div class="healthBar">
-                            <div class="healthBarValue">100%</div>
-                            <div class="healthBarFill"></div>
-                        </div> -->
                         <label for="dinoLife">Life Remaining:</label>
-                        <progress class="dinoLife" max="" value=""></progress>
+                        <progress class="dinoLife"></progress>
                     </div>
                     <div class="actions">
                         <button class="button" id="hit">Hit</button>
@@ -71,12 +66,11 @@
                         <button class="button" id="yield">Yield</button>
                     </div>
                 </div>    
-                <div id="imageDino1">
-                        <img src="" alt="dino image rpg game" id="imagePerso1">
+                <div id="imageContainerDino1">
                 </div>
             </div>
 
-            <div class="perso col-5 col-lg-6">
+            <div class="perso col-6">
                 <div class="attributPerso">
                     <div class="name">
                         <span>Name : <span id="name2"></span></span> 
@@ -92,7 +86,7 @@
                             <div class="healthBarFill"></div>
                         </div> -->
                         <label for="dinoLife">Life Remaining:</label>
-                        <progress class="dinoLife" max="" value=""></progress>
+                        <progress class="dinoLife"></progress>
                     </div>
                     <div class="actions">
                         <button class="button" id="hit2">Hit</button>
@@ -101,8 +95,7 @@
                     </div>
                 </div>
 
-                <div id="imageDino2">
-                    <img src="" alt="dino image rpg game" id="imagePerso2">
+                <div id="imageContainerDino2">
                 </div>
             </div>
         </div>
